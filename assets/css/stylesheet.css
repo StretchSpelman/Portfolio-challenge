@@ -3,6 +3,12 @@
     --dark: #31343d;
 }
 
+main {
+display: flex;
+flex-wrap: wrap;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .main-header {
     padding: 1px;
     background-color:var(--dark);
@@ -27,7 +33,6 @@
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
@@ -49,38 +54,64 @@ a {
     align-items: normal;
     justify-content: center;
     color: var(--dark);
-    font-size: 25px;
 }
 
 .about-me h2 {
-    font-size: 40px;
+    font-size: 20px;
+    justify-content: left;
+
+}
+
+.about-me-text {
+    margin-left: 15px;
+    font-size: 25px;
 }
 
 .picture-of-me {
     max-width: 100%;
     width: 800px;
+    margin-left: 53px;
 }
 
-.work-images {
+.work {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.work-img-1,
+.work-img-2,
+.work-img-3 {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .img-large {
     float: left;
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 0px;
 }
 
 .img-small {
     float: left;
-    clear: left; /* Clear the float to ensure proper stacking */
-    margin-right: 10px; /* Adjust the margin as needed */
-    margin-top: 10px; /* Adjust the margin as needed */
+    clear: left; 
+    margin-right: 0px; 
+    margin-top: 17px; 
 }
 
-.img-stack {
-    width: 100%; /* Ensure images take full width of their container */
+.contact-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.contact-me a {
+    font-size: 20px;
 }
 
 
