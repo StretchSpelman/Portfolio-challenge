@@ -1,10 +1,13 @@
 :root {
     --light: #92cccd;
     --dark: #31343d;
+    --inline-block: inline-block;
+    --flex: flex;
+    --center: center;
 }
 
 main {
-display: flex;
+display: var(--flex);
 flex-wrap: wrap;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -18,12 +21,12 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 
 
 .main-header h1 {
-    display: inline-block;
+    display: var(--inline-block);
     font-size: 50px;
     border-style: solid;
     border-width: 15px;
     border-color: transparent;
-    background-color: #92cccd;
+    background-color: var(--light);
     padding: 0 50px;
     color: var(--dark);
 }
@@ -37,22 +40,22 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 
 .main-header ul li {
-    display: inline-block;
+    display: var(--inline-block);
     list-style-type: none;
 
 }
 
 a {
     color: var(--light);
-    display: inline-block;
+    display: var(--inline-block);
     margin-left: 15px;
 }
 
 
 .about-me {
-    display: flex;
+    display: var(--flex);
     align-items: normal;
-    justify-content: center;
+    justify-content: var(--center);
     color: var(--dark);
 }
 
@@ -68,13 +71,12 @@ a {
 }
 
 .picture-of-me {
-    max-width: 100%;
-    width: 800px;
+    max-width: 700px;
     margin-left: 53px;
 }
 
 .work {
-    display: flex;
+    display: var(--flex);
     flex-wrap: wrap;
     clear: both;
 }
@@ -100,9 +102,9 @@ a {
 }
 
 .contact-me {
-    display: flex;
+    display: var(--flex);
     flex-direction: row;
-    align-items: center;
+    align-items: var(--center);
     margin-top: 20px;
     position:relative;
     bottom: 0;
@@ -114,4 +116,32 @@ a {
     font-size: 20px;
 }
 
+.footer {
+    display: flex;
+    justify-content: var(--center);
+    align-items: normal;
+}
 
+@media screen and (max-width: 992px) {
+    .work {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .picture-of-me {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .picture-of-me {
+        width: 100%;
+    }
+}
